@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ACE Collaborative Demo</title>
+
+    <link rel="stylesheet" href="example.css" />
+    <link rel="stylesheet" href="../dist/css/ace-collab-ext.css" />
+
+    <script src="../node_modules/ace-builds/src-min/ace.js"></script>
+    <script
+      src="../dist/umd/ace-collab-ext.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="editor_contents.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script>
+      var TogetherJSConfig_something = "foo";
+      var TogetherJSConfig_siteName= "http://127.0.0.1:5500/example/index.html";
+      var 
+      // more config...
+    </script>
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <button onclick="TogetherJS(this); return false;">
+        Start TogetherJS
+      </button>
+      <div class="title">Ace Collaborative Example</div>
+      <div class="editors">
+        <div class="editor-column">
+          <div class="editor-label">Source Editor</div>
+          <div class="editor" id="source-editor"></div>
+        </div>
+        <div class="editor-column">
+          <div class="editor-label">Target Editor</div>
+          <div class="wrapped-editor">
+            <div
+              class="editor"
+              id="target-editor"
+              style="height: 100%; width: 400px"
+            ></div>
+            <div class="radar-view" id="target-radar-view"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="example.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
